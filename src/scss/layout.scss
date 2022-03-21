@@ -1,0 +1,52 @@
+*{
+    font-family: $font;
+}
+
+html{
+    overflow-x: hidden;
+    width: 100vw;
+}
+
+body{
+    margin: 0;
+}
+
+.page{
+    padding: 10vw;
+   padding-top: 100px;
+}
+img{
+    object-fit: cover;
+    z-index:-1;
+}
+
+
+
+button{
+    background-color: aquamarine;
+    color: black;
+    padding: 10px 20px;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 2px 4px 4px rgba(0,0,0,0.2);
+    transition: linear 0.2s;
+    &:hover{
+        box-shadow: none;
+    }
+}
+
+.central-text{
+    width: 60%;
+    margin: 100px auto;
+}
+
+.banner{
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 20vh;
+}

@@ -1,0 +1,21 @@
+.immagini{
+    ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 20px;
+        padding: 0;
+        li{
+            width: 100%;
+            height: 200px;
+            list-style: none;
+            img{
+                width: 100%;
+                height: 100%;
+                
+            }
+        }
+        @media screen and (max-width: 1224px) {
+            grid-template-columns: 1fr;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+.contatti{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .copy{
+        width: 50%;
+        p{
+            width: 80%;
+        }
+    }
+    iframe{
+        width: 70%;
+        height: 400px;
+    }
+    @media screen and (max-width: 1224px) {
+        flex-direction: column;
+        .copy{
+            width: 100%;
+            p{
+                width: 100%;
+            }
+        }
+        iframe{
+            width: 100%;
+            height: 200px;
+        }
+    }
+
+}

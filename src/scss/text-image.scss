@@ -1,0 +1,31 @@
+.text-image{
+    display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin: 100px 0;
+   .copy{
+       width: 40%;
+      
+   }
+   img{
+       width: 50%;
+   }
+   @media screen and (max-width: 1224px) {
+       flex-direction: column;
+       .copy{
+           width: 100%;
+           p{
+               width: 100%;
+           }
+       }
+       img{
+           width: 100%;
+       }
+   }
+}
+
+.reversed{
+    flex-direction: row-reverse;
+    
+   
+}
