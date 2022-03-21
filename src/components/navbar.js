@@ -10,13 +10,25 @@ const [isActive, setIsActive] = useState(false);
 
 const handleToggle = () => {
     setIsActive(!isActive)
+
+   var body = document.querySelector(".body");
+   
+   if(body.classList.contains("open-menu")){
+       body.classList.remove("open-menu")
+   } else {
+    body.classList.add("open-menu");
+   }
   }
+
+
+
+  
 
     return (
         <div className='navbar'>
             <div className="navbar-inner">      
         {isTabletOrMobile && <img className="burger-menu" onClick={handleToggle} src={isActive ? "close.png" : "menu.png"}/>}
-        <ul className={`menu ${isActive ? "menu-open" : ""}`}>
+        <ul className="menu">
         <li><Link to="/">HOME</Link></li>
             <li><Link to="/immagini" onClick={handleToggle}>Immagini</Link></li>
             <li><Link to="/cerca-immagini" onClick={handleToggle}>Cerca immagini</Link></li>
