@@ -18,28 +18,26 @@ function Navbar() {
     }
   };
 
-  // apply DRY and object conditional render:
-  return (
-    <div className="navbar">
-      <div className="navbar-inner">
-        {isTabletOrMobile && (
-          <img
-            className="burger-menu"
-            onClick={handleToggle}
-            src={isActive ? "close.png" : "menu.png"}
-            alt=""
-          />
-        )}
-        <ul className="menu">
-          {menu.map((e, i) => (
-            <li key={i}>
-              <Link onClick={handleToggle} to={e.to}>{`${e.text}`}</Link>
-            </li>
-          ))}
-        </ul>
-      </div>
+  // apply DRY:
+  <div className="navbar">
+    <div className="navbar-inner">
+      {isTabletOrMobile && (
+        <img
+          className="burger-menu"
+          onClick={handleToggle}
+          src={isActive ? "close.png" : "menu.png"}
+          alt=""
+        />
+      )}
+      <ul className="menu">
+        {menu.map((e, i) => (
+          <li key={i}>
+            <Link onClick={handleToggle} to={e.to}>{`${e.text}`}</Link>
+          </li>
+        ))}
+      </ul>
     </div>
-  );
+  </div>;
 }
 
 export default Navbar;

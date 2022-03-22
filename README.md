@@ -1,5 +1,5 @@
 creare componente card per la home
-applicare DRY alle card in hom --> esempio in nav
+applicare DRY alle card in home --> esempio in nav
 
 tag semantici --> rimuovere div-hell
 
@@ -34,3 +34,4 @@ switch da .js a .tsx in tutti i file
 creare cartella model (figlio di src)
 creare interfacce per tutti i componenti in UI e impostarle di conseguenza
 aggiungere i types a tutte le funzioni (sia nel context sia nei componenti)
+best practices --> componente si chiama "Immagini" --> interfaccia "IImmagini"
