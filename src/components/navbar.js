@@ -1,32 +1,43 @@
-import React, {useState} from 'react'
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { useMediaQuery } from 'react-responsive'
-
+import { useMediaQuery } from "react-responsive";
+import { menu } from "../data/menu";
 
 function Navbar() {
-const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
+  const [isActive, setIsActive] = useState(false);
 
-const [isActive, setIsActive] = useState(false);
+  const handleToggle = () => {
+    setIsActive(!isActive);
+    const body = document.querySelector(".body");
 
-const handleToggle = () => {
-    setIsActive(!isActive)
-  }
+    if (body.classList.contains("open-menu")) {
+      body.classList.remove("open-menu");
+    } else {
+      body.classList.add("open-menu");
+    }
+  };
 
-    return (
-        <div className='navbar'>
-            <div className="navbar-inner">      
-        {isTabletOrMobile && <img className="burger-menu" onClick={handleToggle} src={isActive ? "close.png" : "menu.png"}/>}
-        <ul className={`menu ${isActive ? "menu-open" : ""}`}>
-        <li><Link to="/">HOME</Link></li>
-            <li><Link to="/immagini" onClick={handleToggle}>Immagini</Link></li>
-            <li><Link to="/cerca-immagini" onClick={handleToggle}>Cerca immagini</Link></li>
-            <li><Link to="/frase" onClick={handleToggle}>Frase</Link></li>
-            <li><Link to="/pagina" onClick={handleToggle}>Pagina</Link></li>
-            <li><Link to="/contatti" onClick={handleToggle}>Contatti</Link></li>
-        </ul>
-        </div>
-     </div>
-    )
+  // apply DRY:
+  <div className="navbar">
+    <div className="navbar-inner">
+      {isTabletOrMobile && (
+        <img
+          className="burger-menu"
+          onClick={handleToggle}
+          src={isActive ? "close.png" : "menu.png"}
+          alt=""
+        />
+      )}
+      <ul className="menu">
+        {menu.map((e, i) => (
+          <li key={i}>
+            <Link onClick={handleToggle} to={e.to}>{`${e.text}`}</Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>;
 }
 
-export default Navbar
+export default Navbar;
