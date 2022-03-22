@@ -23,7 +23,7 @@ inoltre per le immagini del punto precedente impostare onClick che fa aprire l'i
 impostare componente modale che occupi l'80% dello schermo, la costruzione è a tua discrezione --> consiglio: impostare lo stato della modale nel context
 la modale dovrà avere un bottone per chiudersi
 
-spostare la variabile client_id in un file .enc a livello root, aggiungere il file .env al .gitignore
+spostare la variabile client_id di unsplash in un file .env a livello root, aggiungere il file .env al .gitignore
 
 componente frase --> impostare la chiamata nel context mantenendo la medesima UX nel componente
 
@@ -31,6 +31,6 @@ bonus: rendere responsive i nuovi componenti --> es.: modale (schermo intero per
 
 typescript --> implementare TS nel progetto --> 
 switch da .js a .tsx in tutti i file
-creare cartella model
+creare cartella model (figlio di src)
 creare interfacce per tutti i componenti in UI e impostarle di conseguenza
 aggiungere i types a tutte le funzioni (sia nel context sia nei componenti)
