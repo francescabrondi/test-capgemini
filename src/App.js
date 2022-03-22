@@ -21,7 +21,6 @@ function App() {
         <Route path="frase" element={<Frase />} />
         <Route path="pagina" element={<Pagina />} />
         <Route path="contatti" element={<Contatti />} />
-
       </Routes>
     </div>
   );
