@@ -2,10 +2,10 @@ import React from "react";
 
 function Pagina() {
   return (
-    <div className="pagina page">
+    <main className="pagina page">
       <h1>Pagina esempio</h1>
-      <div className="text-image">
-        <div className="copy">
+      <article className="text-image">
+        <section className="copy">
           <h2>Sezione testo e immagine</h2>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem
@@ -15,14 +15,14 @@ function Pagina() {
             fugit corrupti sit dolores ipsa provident nostrum. Ullam fuga ex hic
             sapiente beatae.
           </p>
-        </div>
+        </section>
         <img
           src="https://images.unsplash.com/photo-1647140895728-9372635d58ca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
           alt=""
         />
-      </div>
-      <div className="text-image reversed">
-        <div className="copy">
+      </article>
+      <article className="text-image reversed">
+        <section className="copy">
           <h2>Sezione testo e immagine</h2>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem
@@ -32,13 +32,13 @@ function Pagina() {
             fugit corrupti sit dolores ipsa provident nostrum. Ullam fuga ex hic
             sapiente beatae.
           </p>
-        </div>
+        </section>
         <img
           src="https://images.unsplash.com/photo-1647140895728-9372635d58ca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
           alt=""
         />
-      </div>
-      <div className="central-text">
+      </article>
+      <article className="central-text">
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
           temporibus hic aspernatur praesentium neque! Eius adipisci saepe
@@ -53,11 +53,11 @@ function Pagina() {
           autem. Fugiat modi, dolores temporibus repellendus distinctio, dolore
           nobis animi reiciendis illo, ullam maxime impedit.
         </p>
-      </div>
-      <div className="banner">
+      </article>
+      <section className="banner">
         <h2>Lorem ipsum</h2>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 }
 

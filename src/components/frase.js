@@ -14,7 +14,7 @@ function Frase() {
   };
 
   return (
-    <div className="test page">
+    <main className="test page">
       <h1>Citazione</h1>
       <p>
         {quote
@@ -22,7 +22,7 @@ function Frase() {
           : "Clicca per scoprire una citazione di Kanye West"}
       </p>
       <button onClick={getQuote}>Nuova frase</button>
-    </div>
+    </main>
   );
 }
 

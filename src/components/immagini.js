@@ -14,7 +14,7 @@ function Immagini() {
   }, []);
 
   return (
-    <div className="immagini page">
+    <main className="immagini page">
       <h1>Galleria immagini</h1>
       <ul>
         {photos.map((photo) => (
@@ -23,7 +23,7 @@ function Immagini() {
           </li>
         ))}
       </ul>
-    </div>
+    </main>
   );
 }
 

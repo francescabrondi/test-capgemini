@@ -23,7 +23,7 @@ function Cercaimmagini() {
   console.log(photos.results);
 
   return (
-    <div className="immagini page">
+    <main className="immagini page">
       <h1>Ricerca immagini</h1>
       <input
         type="text"
@@ -38,7 +38,7 @@ function Cercaimmagini() {
             </li>
           ))}
       </ul>
-    </div>
+    </main>
   );
 }
 
