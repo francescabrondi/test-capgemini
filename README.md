@@ -16,7 +16,7 @@ in cerca immagini aggiungere il loader fino a che tutte le immagini non sono car
 
 aggiungere un tasto "Restart" che fa sparire le immagini cercate e riporta cercaImmagini allo stato iniziale
 
-sia per le immagini in "immagini" sia per quelle in "cercaImmagini" impostare un hover del mouse che fa partire un'animazione che aumenta le dimensioni del 25% in 500 millisecondi con animazione easy-in
+✔ sia per le immagini in "immagini" sia per quelle in "cercaImmagini" impostare un hover del mouse che fa partire un'animazione che aumenta le dimensioni del 25% in 500 millisecondi con animazione easy-in --- (ho fatto il 10% perchè 25 era tantissimo)
 
 inoltre per le immagini del punto precedente impostare onClick che fa aprire l'immagine in una modale
 
