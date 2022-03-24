@@ -12,13 +12,13 @@ export default function Cards() {
               src={card.img}
               alt=""
             />
-            <div className="copy">
+            <section className="copy">
               <h3>{card.titolo}</h3>
               <p>
                {card.testo}
               </p>
               <button><Link to={card.url}>Scopri</Link> </button>
-            </div>
+            </section>
             </li>
               ))} 
       </ul>

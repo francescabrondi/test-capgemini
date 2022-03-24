@@ -20,8 +20,8 @@ function Navbar() {
 
   return(
   // apply DRY:
-  <div className="navbar">
-    <div className="navbar-inner">
+  <header className="navbar">
+    <nav className="navbar-inner">
       {isTabletOrMobile && (
         <img
           className="burger-menu"
@@ -37,8 +37,8 @@ function Navbar() {
           </li>
         ))}
       </ul>
-    </div>
-  </div>
+    </nav>
+  </header>
   )
 }
 
