@@ -1,7 +1,7 @@
-creare componente card per la home
-applicare DRY alle card in home --> esempio in nav
+✔ creare componente card per la home 
+✔ applicare DRY alle card in home --> esempio in nav 
 
-tag semantici --> rimuovere div-hell
+✔ tag semantici --> rimuovere div-hell
 
 creare un context al progetto
 impostare le chiamate nel context
