@@ -4,7 +4,7 @@ function Cercaimmagini() {
   const [photos, setPhotos] = useState([]);
   const [query, setQuery] = useState("");
 
-  const client_id = "J7TD571817VyjgGe0S-Z_LRDYxMPU-TqowqVxMN58p0";
+  const client_id = process.env.REACT_APP_CLIENT_ID;
 
   const test = console.log(query);
 

@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 function Immagini() {
   const [photos, setPhotos] = useState([]);
 
-  const client_id = "J7TD571817VyjgGe0S-Z_LRDYxMPU-TqowqVxMN58p0";
+  const client_id = process.env.REACT_APP_CLIENT_ID;
 
   useEffect(() => {
     fetch(`https://api.unsplash.com/photos/?client_id=${client_id}`, {})
