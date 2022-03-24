@@ -18,6 +18,7 @@ function Navbar() {
     }
   };
 
+  return(
   // apply DRY:
   <div className="navbar">
     <div className="navbar-inner">
@@ -37,7 +38,8 @@ function Navbar() {
         ))}
       </ul>
     </div>
-  </div>;
+  </div>
+  )
 }
 
 export default Navbar;

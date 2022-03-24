@@ -1,12 +1,12 @@
 import React from 'react';
 import { Routes, Route } from "react-router-dom";
-import Navbar from './components/navbar';
-import Home from './components/home';
-import Immagini from './components/immagini';
-import Cercaimmagini from './components/cercaImmagini';
-import Frase from './components/frase';
-import Pagina from './components/pagina';
-import Contatti from './components/contatti';
+import Navbar from './components/Navbar';
+import Home from './components/Home';
+import Immagini from './components/Immagini';
+import Cercaimmagini from './components/CercaImmagini';
+import Frase from './components/Frase';
+import Pagina from './components/Pagina';
+import Contatti from './components/Contatti';
 
 import './scss/main.scss'
 
