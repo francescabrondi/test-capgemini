@@ -1,18 +1,20 @@
-import React, { useState, useEffect } from "react";
-import Context from "./context"
+import React, { useContext} from "react";
+import { ImagesContext } from '../contexts/ImmaginiContext';
 
 function Immagini() {
-  const [photos, setPhotos] = useState([]);
+/*  const [photos, setPhotos] = useState([]);
 
-  const client_id = process.env.REACT_APP_CLIENT_ID;
+  const client_id = process.env.REACT_APP_CLIENT_ID; */
 
-  useEffect(() => {
+  /* useEffect(() => {
     fetch(`https://api.unsplash.com/photos/?client_id=${client_id}`, {})
       .then((res) => res.json())
       .then((result) => {
         setPhotos(result);
       });
-  }, []);
+  }, []); */
+
+  const {photos} = useContext(ImagesContext);
 
   return (
     <main className="immagini page">
@@ -25,7 +27,7 @@ function Immagini() {
         ))}
       </ul>
     </main>
-  );
+  )
 }
 
 export default Immagini;
