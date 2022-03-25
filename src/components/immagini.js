@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Context from "./context"
 
 function Immagini() {
   const [photos, setPhotos] = useState([]);
