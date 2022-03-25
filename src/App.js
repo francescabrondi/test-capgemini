@@ -8,6 +8,8 @@ import Frase from './components/Frase';
 import Pagina from './components/Pagina';
 import Contatti from './components/Contatti';
 
+import Context from "./components/context"
+
 import './scss/main.scss'
 
 function App() {
