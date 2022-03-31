@@ -7,6 +7,7 @@ import Cercaimmagini from './components/CercaImmagini';
 import Frase from './components/Frase';
 import Pagina from './components/Pagina';
 import Contatti from './components/Contatti';
+import ImagesContextProvider from './contexts/ImmaginiContext'
 
 
 import './scss/main.scss'
@@ -18,7 +19,11 @@ function App() {
      <Routes>
         <Route path="/" element={<Home />} />
         <Route path="immagini" element={<Immagini />} />
-        <Route path="cerca-immagini" element={<Cercaimmagini />} />
+        <Route path="cerca-immagini" element={
+<ImagesContextProvider>
+        <Cercaimmagini />
+      </ImagesContextProvider>
+        } />
         <Route path="frase" element={<Frase />} />
         <Route path="pagina" element={<Pagina />} />
         <Route path="contatti" element={<Contatti />} />

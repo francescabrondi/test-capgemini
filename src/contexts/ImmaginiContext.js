@@ -2,7 +2,7 @@ import React, {createContext, useState, useEffect} from 'react'
 
 export const ImagesContext = createContext();
 
-const ImagesContextProvider = (xyz) => {
+const ImagesContextProvider = (props) => {
     const [photos, setPhotos] = useState([]);
     const client_id = process.env.REACT_APP_CLIENT_ID;
 
@@ -16,7 +16,7 @@ const ImagesContextProvider = (xyz) => {
 
   return (
     <ImagesContext.Provider value={{ photos }}>
-        {xyz.children}
+        {props.children}
     </ImagesContext.Provider>
 )
 }
