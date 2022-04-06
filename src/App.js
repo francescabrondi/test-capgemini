@@ -8,23 +8,26 @@ import Frase from "./components/Frase";
 import Pagina from "./components/Pagina";
 import Contatti from "./components/Contatti";
 import ImagesContextProvider from "./contexts/ImmaginiContext";
+import QuotesContextProvider from "./contexts/FrasiContext";
 
 import "./scss/main.scss";
 
 function App() {
   return (
     <ImagesContextProvider>
-      <div className="App">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="immagini" element={<Immagini />} />
-          <Route path="cerca-immagini" element={<Cercaimmagini />} />
-          <Route path="frase" element={<Frase />} />
-          <Route path="pagina" element={<Pagina />} />
-          <Route path="contatti" element={<Contatti />} />
-        </Routes>
-      </div>
+      <QuotesContextProvider>
+        <div className="App">
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="immagini" element={<Immagini />} />
+            <Route path="cerca-immagini" element={<Cercaimmagini />} />
+            <Route path="frase" element={<Frase />} />
+            <Route path="pagina" element={<Pagina />} />
+            <Route path="contatti" element={<Contatti />} />
+          </Routes>
+        </div>
+      </QuotesContextProvider>
     </ImagesContextProvider>
   );
 }
