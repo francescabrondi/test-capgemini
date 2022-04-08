@@ -15,7 +15,7 @@ const ImagesContextProvider = (props) => {
       .then((result) => {
         setPhotos(result);
       });
-    //setLoading(false);
+    setLoading(false);
   }, []);
 
   useEffect(() => {
@@ -28,7 +28,12 @@ const ImagesContextProvider = (props) => {
         .then((result) => {
           setImages(result.results);
         });
+    setLoading(false);
   }, [query]);
+
+  const send = (e) => {
+    console.log(e.target.value);
+  };
 
   const SearchImages = (e) => {
     setQuery(e.target.value);
