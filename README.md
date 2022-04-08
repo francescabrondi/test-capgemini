@@ -3,11 +3,11 @@
 
 ✔ tag semantici --> rimuovere div-hell
 
-creare un context al progetto
+✔creare un context al progetto
 impostare le chiamate nel context
 leggere i dati ricevuti in componente immagini e renderizzare quanto arriva
 
-impostare anche la chiamata per il cerca immagini nel context
+✔impostare anche la chiamata per il cerca immagini nel context
 renderizzare dai dati nel context anche il cerca immagini
 
 aggiungere uno stato loading nel context

@@ -1,38 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useContext } from "react";
+import { ImagesContext } from "../contexts/ImmaginiContext";
 
 function Cercaimmagini() {
-  const [photos, setPhotos] = useState([]);
-  const [query, setQuery] = useState("");
-
-  const client_id = process.env.REACT_APP_CLIENT_ID;
-
-  const test = console.log(query);
-
-  useEffect(() => {
-    query &&
-      fetch(
-        `https://api.unsplash.com/search/photos/?client_id=${client_id}&query=${query}`,
-        {}
-      )
-        .then((res) => res.json())
-        .then((result) => {
-          setPhotos(result.results);
-        });
-  }, [query]);
-
-  console.log(photos.results);
+  const { images, query, SearchImages } = useContext(ImagesContext);
 
   return (
     <main className="immagini page">
       <h1>Ricerca immagini</h1>
-      <input
-        type="text"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-      />
+      <input type="text" value={query} onChange={SearchImages} />
       <ul>
-        {photos.length > 0 &&
-          photos.map((photo) => (
+        {images.length > 0 &&
+          images.map((photo) => (
             <li key={photo.id}>
               <img src={photo.urls.regular} alt="" />
             </li>

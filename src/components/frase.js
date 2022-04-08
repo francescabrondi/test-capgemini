@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { QuotesContext } from "../contexts/FrasiContext";
 
 function Frase() {
-  const [quote, setQuote] = useState("");
+  // const [quote, setQuote] = useState("");
 
-  const getQuote = () => {
+  /*  const getQuote = () => {
     fetch("https://api.kanye.rest/", {
       method: "GET",
     })
@@ -11,7 +12,8 @@ function Frase() {
       .then((result) => {
         setQuote(result);
       });
-  };
+  }; */
+  const { quote, getQuote } = useContext(QuotesContext);
 
   return (
     <main className="test page">
@@ -21,7 +23,7 @@ function Frase() {
           ? quote.quote
           : "Clicca per scoprire una citazione di Kanye West"}
       </p>
-      <button onClick={getQuote}>Nuova frase</button>
+      <button onClick={(e) => getQuote(e.target.value)}>Nuova frase</button>
     </main>
   );
 }

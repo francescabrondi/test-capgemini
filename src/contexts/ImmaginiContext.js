@@ -6,6 +6,7 @@ const ImagesContextProvider = (props) => {
   const [photos, setPhotos] = useState([]);
   const [images, setImages] = useState([]);
   const [query, setQuery] = useState("");
+  const [isLoading, setLoading] = useState(true);
   const client_id = process.env.REACT_APP_CLIENT_ID;
 
   useEffect(() => {
@@ -14,6 +15,7 @@ const ImagesContextProvider = (props) => {
       .then((result) => {
         setPhotos(result);
       });
+    //setLoading(false);
   }, []);
 
   useEffect(() => {
@@ -33,7 +35,9 @@ const ImagesContextProvider = (props) => {
   };
 
   return (
-    <ImagesContext.Provider value={{ photos, images, query, SearchImages }}>
+    <ImagesContext.Provider
+      value={{ photos, images, query, SearchImages, isLoading }}
+    >
       {props.children}
     </ImagesContext.Provider>
   );
