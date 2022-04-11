@@ -31,8 +31,8 @@ const ImagesContextProvider = (props) => {
     setLoading(false);
   }, [query]);
 
-  const send = (e) => {
-    console.log(e.target.value);
+  const reset = () => {
+    setQuery("");
   };
 
   const SearchImages = (e) => {
@@ -41,7 +41,7 @@ const ImagesContextProvider = (props) => {
 
   return (
     <ImagesContext.Provider
-      value={{ photos, images, query, SearchImages, isLoading }}
+      value={{ photos, images, query, SearchImages, isLoading, reset }}
     >
       {props.children}
     </ImagesContext.Provider>
