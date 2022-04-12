@@ -7,6 +7,7 @@ import Cercaimmagini from "./components/CercaImmagini";
 import Frase from "./components/Frase";
 import Pagina from "./components/Pagina";
 import Contatti from "./components/Contatti";
+import Wrapper from "./components/Wrapper";
 import ImagesContextProvider from "./contexts/ImmaginiContext";
 import QuotesContextProvider from "./contexts/FrasiContext";
 
@@ -17,15 +18,17 @@ function App() {
     <ImagesContextProvider>
       <QuotesContextProvider>
         <div className="App">
-          <Navbar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="immagini" element={<Immagini />} />
-            <Route path="cerca-immagini" element={<Cercaimmagini />} />
-            <Route path="frase" element={<Frase />} />
-            <Route path="pagina" element={<Pagina />} />
-            <Route path="contatti" element={<Contatti />} />
-          </Routes>
+          <Wrapper>
+            <Navbar />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="immagini" element={<Immagini />} />
+              <Route path="cerca-immagini" element={<Cercaimmagini />} />
+              <Route path="frase" element={<Frase />} />
+              <Route path="pagina" element={<Pagina />} />
+              <Route path="contatti" element={<Contatti />} />
+            </Routes>
+          </Wrapper>
         </div>
       </QuotesContextProvider>
     </ImagesContextProvider>

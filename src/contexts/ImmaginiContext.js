@@ -7,6 +7,8 @@ const ImagesContextProvider = (props) => {
   const [images, setImages] = useState([]);
   const [query, setQuery] = useState("");
   const [isLoading, setLoading] = useState(true);
+  const [modal, setModal] = useState(false);
+  const [photoId, setPhotoId] = useState("");
   const client_id = process.env.REACT_APP_CLIENT_ID;
 
   useEffect(() => {
@@ -33,15 +35,37 @@ const ImagesContextProvider = (props) => {
 
   const reset = () => {
     setQuery("");
+    setImages([]);
   };
 
   const SearchImages = (e) => {
     setQuery(e.target.value);
   };
 
+  const openModal = (a) => {
+    setModal(!modal);
+    setPhotoId(a);
+  };
+
+  const closeModal = () => {
+    setModal(modal);
+    setPhotoId("");
+  };
+
   return (
     <ImagesContext.Provider
-      value={{ photos, images, query, SearchImages, isLoading, reset }}
+      value={{
+        photos,
+        images,
+        query,
+        SearchImages,
+        isLoading,
+        reset,
+        openModal,
+        photoId,
+        modal,
+        closeModal,
+      }}
     >
       {props.children}
     </ImagesContext.Provider>

@@ -10,11 +10,11 @@ leggere i dati ricevuti in componente immagini e renderizzare quanto arriva
 ✔impostare anche la chiamata per il cerca immagini nel context
 renderizzare dai dati nel context anche il cerca immagini
 
-aggiungere uno stato loading nel context
+✔ aggiungere uno stato loading nel context
 impostare componente loader (uno spinner a schermo intero può andare bene)
 in cerca immagini aggiungere il loader fino a che tutte le immagini non sono caricate, quindi loader sparisce ed appaiono tutte le immagini cercate
 
-aggiungere un tasto "Restart" che fa sparire le immagini cercate e riporta cercaImmagini allo stato iniziale
+✔ aggiungere un tasto "Restart" che fa sparire le immagini cercate e riporta cercaImmagini allo stato iniziale
 
 ✔ sia per le immagini in "immagini" sia per quelle in "cercaImmagini" impostare un hover del mouse che fa partire un'animazione che aumenta le dimensioni del 25% in 500 millisecondi con animazione easy-in --- (ho fatto il 10% perchè 25 era tantissimo)
 
@@ -25,7 +25,7 @@ la modale dovrà avere un bottone per chiudersi
 
 ✔ spostare la variabile client_id di unsplash in un file .env a livello root, aggiungere il file .env al .gitignore
 
-componente frase --> impostare la chiamata nel context mantenendo la medesima UX nel componente
+✔componente frase --> impostare la chiamata nel context mantenendo la medesima UX nel componente
 
 bonus: rendere responsive i nuovi componenti --> es.: modale (schermo intero per media query tablet e phone)
 
