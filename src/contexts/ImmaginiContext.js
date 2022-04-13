@@ -48,7 +48,7 @@ const ImagesContextProvider = (props) => {
   };
 
   const closeModal = () => {
-    setModal(modal);
+    setModal(!modal);
     setPhotoId("");
   };
 

@@ -18,17 +18,16 @@ function App() {
     <ImagesContextProvider>
       <QuotesContextProvider>
         <div className="App">
-          <Wrapper>
-            <Navbar />
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="immagini" element={<Immagini />} />
-              <Route path="cerca-immagini" element={<Cercaimmagini />} />
-              <Route path="frase" element={<Frase />} />
-              <Route path="pagina" element={<Pagina />} />
-              <Route path="contatti" element={<Contatti />} />
-            </Routes>
-          </Wrapper>
+          <Wrapper />
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="immagini" element={<Immagini />} />
+            <Route path="cerca-immagini" element={<Cercaimmagini />} />
+            <Route path="frase" element={<Frase />} />
+            <Route path="pagina" element={<Pagina />} />
+            <Route path="contatti" element={<Contatti />} />
+          </Routes>
         </div>
       </QuotesContextProvider>
     </ImagesContextProvider>
