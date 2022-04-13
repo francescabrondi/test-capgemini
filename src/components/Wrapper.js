@@ -5,11 +5,9 @@ import { ImagesContext } from "../contexts/ImmaginiContext";
 export default function Wrapper() {
   const { modal } = useContext(ImagesContext);
 
-  if (!modal) {
-    return (
-      <div className="wrapper">
-        <Modal />
-      </div>
-    );
-  }
+  return (
+    <div className={!modal ? "wrapper-modal" : "wrapper"}>
+      <Modal />
+    </div>
+  );
 }
