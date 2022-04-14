@@ -1,8 +1,9 @@
 import React, { useContext } from "react";
 import { ImagesContext } from "../contexts/ImmaginiContext";
 import LoadingSpinner from "./LoadingSpinner";
+import { IImmagini } from "../model/interface";
 
-function Immagini() {
+const Immagini = ():IImmagini => {
   const { photos, isLoading, openModal, modal } = useContext(ImagesContext);
   console.log(modal);
   return (
