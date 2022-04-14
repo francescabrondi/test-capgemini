@@ -8,13 +8,13 @@ export default function Modal() {
   console.log(photoId);
   return (
     <div className="modal">
-      <img
-        src="close.png"
-        alt=""
-        className="close-modal"
-        onClick={closeModal}
-      />
       <figure>
+        <img
+          src="close.png"
+          alt=""
+          className="close-modal"
+          onClick={closeModal}
+        />
         <img
           src={photos.find((photo) => photo.id === photoId).urls.regular}
           alt=""
