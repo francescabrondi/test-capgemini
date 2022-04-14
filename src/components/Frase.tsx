@@ -1,18 +1,9 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { QuotesContext } from "../contexts/FrasiContext";
+import { IFrase } from "../model/interface";
 
-function Frase() {
-  // const [quote, setQuote] = useState("");
-
-  /*  const getQuote = () => {
-    fetch("https://api.kanye.rest/", {
-      method: "GET",
-    })
-      .then((res) => res.json())
-      .then((result) => {
-        setQuote(result);
-      });
-  }; */
+const Frase = ():IFrase => {
+ 
   const { quote, getQuote } = useContext(QuotesContext);
 
   return (

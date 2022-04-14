@@ -1,4 +1,6 @@
-export  const menu = [
+import { INavbar } from "../model/interface";
+
+export  const menu: INavbar[] = [
     {
       id: 0,
       to: "/",

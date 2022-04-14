@@ -1,19 +1,17 @@
-interface INavbar {
-    isActive: boolean;
-    menu: string[];
+export interface INavbar{
+    id: number;
+    to:string;
+    text: string;
 }
-
-interface ICard {
-    cards: Array<{
+export interface ICard {
         id: number;
         img: string;
         titolo: string;
         testo: string;
         url: string;
-    }>
 }
 
-interface ICercaImmagini{
+export interface ICercaImmagini{
     images: Array <{
         id: string;
         urls: Array <{
@@ -24,11 +22,11 @@ interface ICercaImmagini{
     isLoading: boolean;
 }
 
-interface IFrase {
+export interface IFrase {
     quote: string;
 }
 
-interface IImmagini {
+export interface IImmagini {
     photos: Array <{
         id: string;
         urls: Array <{
@@ -39,11 +37,11 @@ interface IImmagini {
     modal: boolean;
 }
 
-interface IModal {
+export interface IModal {
     photoId: string;
     modal: boolean;
 }
 
-interface IWrapepr {
+export interface IWrapepr {
     modal: boolean;
 }

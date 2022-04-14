@@ -1,7 +1,8 @@
 import React, { useContext } from "react";
 import { ImagesContext } from "../contexts/ImmaginiContext";
+import { IModal } from "../model/interface";
 
-export default function Modal() {
+export default function Modal(): IModal {
   const { photoId, closeModal, modal } = useContext(ImagesContext);
 
   return (

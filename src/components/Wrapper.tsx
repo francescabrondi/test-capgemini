@@ -1,8 +1,9 @@
 import React, { useContext } from "react";
 import Modal from "./Modal";
 import { ImagesContext } from "../contexts/ImmaginiContext";
+import { IWrapper } from "../model/interface";
 
-export default function Wrapper() {
+const Wrapper = (): IWrapper => {
   const { modal } = useContext(ImagesContext);
 
   if (!modal) {
@@ -12,4 +13,6 @@ export default function Wrapper() {
       </div>
     );
   }
-}
+};
+
+export default Wrapper;

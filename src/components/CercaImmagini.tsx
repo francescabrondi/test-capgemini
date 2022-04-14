@@ -1,8 +1,9 @@
 import React, { useContext } from "react";
 import { ImagesContext } from "../contexts/ImmaginiContext";
 import LoadingSpinner from "./LoadingSpinner";
+import { ICercaImmagini } from "../model/interface";
 
-function Cercaimmagini() {
+const Cercaimmagini = ():ICercaImmagini => {
   const { images, query, SearchImages, isLoading, reset } =
     useContext(ImagesContext);
 
